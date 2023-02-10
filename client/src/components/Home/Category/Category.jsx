@@ -10,16 +10,16 @@ const Category = () => {
     <div className="shop-by-category">
       <div className="categories">
         <div className="category">
-          <img src={cat1} alt="category-image"/>
+          <img src={cat1} alt="Headphone"/>
         </div>
         <div className="category">
-          <img src={cat2} alt="category-image"/>
+          <img src={cat2} alt="Bluetooth Speaker"/>
         </div>
         <div className="category">
-          <img src={cat3} alt="category-image"/>
+          <img src={cat3} alt="Smart Watches"/>
         </div>
         <div className="category">
-          <img src={cat4} alt="category-image"/>
+          <img src={cat4} alt="Wireless Earbuds"/>
         </div>
       </div>
     </div>
