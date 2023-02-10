@@ -1,9 +1,8 @@
 import "./Product.scss";
-import prod from  '../../../assets/products/earbuds-prod-1.webp'
-const Product = () => {
+const Product = ({src}) => {
     return <div className="product-card">
         <div className="thumbnail">
-            <img src={prod} alt="earbud" srcset="" />
+            <img src={src} alt="earbud" srcset="" />
         </div>
         <div className="product-details">
             <span className="name">Samsung O2 Earbud</span>
