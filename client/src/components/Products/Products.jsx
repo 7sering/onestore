@@ -9,10 +9,10 @@ import pro5  from "../../assets/products/earbuds-prod-5.webp"
 import pro6  from "../../assets/products/headphone-prod-6.webp"
 import pro7  from "../../assets/products/headphone-prod-1.webp"
 import pro8  from "../../assets/products/earbuds-prod-4.webp"
-const Products = ({innerPage}) => {
+const Products = ({innerPage, headingText}) => {
   return (
     <div className="products-container">
-     {!innerPage && <div className="product-heading">Section Headings</div>}
+     {!innerPage && <div className="product-heading">{headingText}</div>}
       <div className="products">
         <Product src={pro1}/>
         <Product src={pro2}/>
