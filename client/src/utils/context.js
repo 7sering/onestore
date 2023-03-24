@@ -15,7 +15,18 @@ const AppContext = ({ children }) => {
 
   useEffect(() => {},[cartItems])
 
-  const handleAddToCart = (product, quantity) => {}
+  const handleAddToCart = (product, quantity) => {
+      const items = [...cartItems]
+      const index = items.findIndex((p) => p.id === product.id)
+      if(index !== -1){
+        items[index].attributes.quantity += quantity
+      }else{
+        product.attributes.quantity = quantity
+        items = [...items, product]
+      }
+      setCartItems(items)
+  }
+
   const handleRemoveFromCart = (product) => {}
   const handleCartProductQuantity = ( type, product) => {}
 
