@@ -1,11 +1,24 @@
-import { createContext } from "react";
-import { useState } from "react";
+import { createContext, useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 export const Context = createContext();
 
 const AppContext = ({ children }) => {
   const [categories, setCategories] = useState();
   const [products, setProducts] = useState();
+
+  ///Cart State
+  const [cartItems, setCartItems] = useState([]);
+  const [cartCount, setCartCount] = useState(0);
+  const [cartSubTotal, setCartSubTotal] = useState(0);
+  const location = useLocation();
+
+  useEffect(() => {},[cartItems])
+
+  const handleAddToCart = (product, quantity) => {}
+  const handleRemoveFromCart = (product) => {}
+  const handleCartProductQuantity = ( type, product) => {}
+
   return (
     <Context.Provider
       value={{
@@ -13,6 +26,15 @@ const AppContext = ({ children }) => {
         setCategories,
         products,
         setProducts,
+        cartItems,
+        setCartItems,
+        cartCount,
+        setCartCount,
+        cartSubTotal,
+        setCartSubTotal,
+        handleAddToCart,
+        handleRemoveFromCart,
+        handleCartProductQuantity
       }}
     >
       {children}
